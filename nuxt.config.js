@@ -2,7 +2,7 @@ module.exports = {
     /*
     ** Headers of the page
     */
-    assetPrefix: process.env.NODE_ENV === 'production' ? '/{reponame}' : '',
+    assetPrefix: process.env.NODE_ENV === 'production' ? 'https://andy-0414.github.io/sunrin_cafeteria/' : '',
     head: {
         title: 'sunrin_cafeteria',
         meta: [
