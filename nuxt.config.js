@@ -36,8 +36,8 @@ module.exports = {
             }
         }
     },
-    env: {
-        baseUrl: process.env.BASE_URL || 'https://andy-0414.github.io/sunrin_cafeteria/'
+    router: {
+        base: '/sunrin_cafeteria/'
     }
 }
 
