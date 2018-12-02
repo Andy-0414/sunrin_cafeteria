@@ -60,7 +60,7 @@
         flex-wrap: wrap;
 
         width: 100%;
-        height: 100vh;
+        height: max-content;
         background: #EEEEEE
     }
 
