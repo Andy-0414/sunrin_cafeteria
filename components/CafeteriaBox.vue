@@ -28,6 +28,8 @@
 
 <style>
     .CafeteriaBox {
+        transition: 0.5s;
+
         position: relative;
 
         height: 600px;
