@@ -60,7 +60,8 @@
         flex-wrap: wrap;
 
         width: 100%;
-        height: max-content;
+        height: 100vh;
+        overflow: scroll;
         background: #EEEEEE
     }
 
