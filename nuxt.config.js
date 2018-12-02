@@ -1,9 +1,8 @@
-const debug = process.env.NODE_ENV !== "production";
+const debug = process.env.NODE_ENV === "production";
 module.exports = {
     /*
     ** Headers of the page
     */
-    'process.env.BACKEND_URL': !debug ? 'https://andy-0414.github.io/sunrin_cafeteria/' : '',
     head: {
         title: 'sunrin_cafeteria',
         meta: [
@@ -36,6 +35,9 @@ module.exports = {
                 })
             }
         }
+    },
+    env: {
+        baseUrl: process.env.BASE_URL || 'https://andy-0414.github.io/sunrin_cafeteria/'
     }
 }
 
