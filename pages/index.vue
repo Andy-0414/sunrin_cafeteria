@@ -18,15 +18,14 @@
             tomorrow: null
         }),
         created: function() {
-            var date = new Date().getDate()
+            var nowDate = new Date()
             axios.get("https://schoolmenukr.ml/api/high/B100000658",{
                 params : {
-                    year: 2018,
-                    month: 12,
-                    date: date
+                    date: nowDate.getDate()
                     }
                 })
             .then(data=>{
+                data.data.menu.date = nowDate
                 this.today = data.data.menu
             })
             .catch(err=>{
@@ -35,15 +34,13 @@
 
             var date = new Date()
             date.setDate( date.getDate() + 1 )
-            date = date.getDate()
             axios.get("https://schoolmenukr.ml/api/high/B100000658",{
                 params : {
-                    year: 2018,
-                    month: 12,
-                    date: date
+                    date: date.getDate()
                     }
                 })
             .then(data=>{
+                data.data.menu.date = date
                 this.tomorrow = data.data.menu
             })
             .catch(err=>{

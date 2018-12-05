@@ -1,7 +1,8 @@
 <template>
+<transition name="fade" appear>
     <div class="CafeteriaBox">
         <div id="infomation">
-            {{menu.date}}
+            {{menu.date.toLocaleDateString()}}
         </div>
         <div v-for="i in menu.lunch" :key="i" class="list">
             {{ i }}
@@ -10,6 +11,7 @@
             급식이 없습니다.
         </div>
     </div>
+</transition>
 </template>
 
 <script>
@@ -70,5 +72,13 @@
     }
     .list:nth-child(2n){
         background-color: #4fb4bf11
+    }
+
+
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .5s;
+    }
+    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+        opacity: 0;
     }
 </style>
