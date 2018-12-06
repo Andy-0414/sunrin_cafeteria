@@ -30,8 +30,7 @@
 
 <style>
     .CafeteriaBox {
-        transition: 0.5s;
-
+        transition: 1s;
         position: relative;
 
         height: 600px;
@@ -45,7 +44,7 @@
         background-color: white;
         border-radius: 10px;
 
-        box-shadow: -2px 2px 10px 1px #AAAAAA;
+        box-shadow: -5px 5px 20px 1px #AAAAAA;
     }
     #infomation{
         display: flex;
@@ -73,12 +72,10 @@
     .list:nth-child(2n){
         background-color: #4fb4bf11
     }
-
-
-    .fade-enter-active, .fade-leave-active {
-        transition: opacity .5s;
-    }
-    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    
+    .fade-enter, .fade-leave-to {
+        height: 0;
+        box-shadow: none;
         opacity: 0;
     }
 </style>
